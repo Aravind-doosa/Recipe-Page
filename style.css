@@ -1,0 +1,219 @@
+/* Set default font size and alignment for attribution */
+.attribution {
+    font-size: 15px; /* Reduce font size for smaller text */
+    text-align: center; /* Center the attribution text */
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); /* Set the color for attribution links */
+}
+
+/* Reset default margins and paddings and apply box-sizing globally */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Simplify layout calculations */
+}
+
+/* Define color variables for consistent usage across the site */
+:root {
+    --white: hsl(0, 0%, 100%); /* Primary white color */
+    --stone-100: hsl(30, 54%, 90%); /* Light stone color */
+    --stone-150: hsl(30, 18%, 87%); /* Slightly darker stone */
+    --stone-600: hsl(30, 10%, 34%); /* Dark stone color */
+    --stone-900: hsl(24, 5%, 18%); /* Very dark stone color */
+    --brown-800: hsl(14, 45%, 36%); /* Rich brown color */
+    --rose-800: hsl(332, 51%, 32%); /* Dark rose color */
+    --rose-50: hsl(330, 100%, 98%); /* Light rose color */
+}
+
+/* Styling the body */
+body {
+    background-color: #F0EAD6; /* Soft cream background */
+    color: #645452; /* General text color */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    font-family: 'Outfit', sans-serif; /* Sans-serif font for body */
+    line-height: 1.4; /* Improve readability */
+    display: grid;
+    place-content: center; /* Center content both vertically and horizontally */
+}
+
+/* Ensure images fit within containers */
+img {
+    max-width: 100%; /* Responsive image width */
+    display: block; /* Remove inline space */
+}
+
+/* Style headings */
+h1, h2 {
+    font-family: 'Young Serif', serif; /* Serif font for headings */
+    font-weight: 400%; /* Change font-weight for lighter text */
+}
+
+h1 {
+    color: #490206; /* Dark red for primary heading */
+    font-size: 2.8rem; /* Large font size for h1 */
+}
+
+h2 {
+    color: var(--nutmeg); /* Nutmeg color from the root variables */
+    margin-bottom: 1rem; /* Add space below h2 */
+    /* margin: 2rem; Commented out since it's unnecessary */
+}
+
+/* Style for recipe steps */
+.recipe-step {
+    margin: 1rem 0; /* Add space around recipe steps */
+}
+
+/* Margin for nutrition section */
+.Nutrition {
+    margin-top: 1rem; /* Space above the nutrition section */
+}
+
+/* Styling for unordered lists */
+ul {
+    padding-left: 1.25rem; /* Indentation for list items */
+}
+
+ul li::marker {
+    color: var(--nutmeg); /* Nutmeg-colored bullet points */
+    font-weight: bold; /* Bold markers */
+}
+
+ul li {
+    margin-bottom: .5rem; /* Space between list items */
+}
+
+ul li span {
+    color: var(--wenge-brown); /* Dark brown text */
+    margin-left: 1rem; /* Space between text and bullet */
+    font-weight: 700; /* Bold text */
+}
+
+/* Styling for horizontal rules */
+hr {
+    margin: 1.5rem 0; /* Space around the horizontal rule */
+    border: 1px solid var(--light-grey); /* Light grey border */
+}
+
+/* Container for recipe content */
+.container {
+    max-width: 700px; /* Constrain content width */
+    background-color: var(--white); /* White background */
+    margin: 2rem; /* Outer margin */
+    border-radius: 1rem; /* Rounded corners */
+}
+
+/* Style the recipe image */
+.container .recipe-img img {
+    border-radius: 1rem; /* Rounded corners on the image */
+}
+
+/* Padding for recipe information */
+.recipe-information {
+    padding: 0rem 2rem 2rem 2rem; /* Padding for consistent spacing */
+}
+
+/* Styling for description text */
+.description {
+    margin: 1.5rem 0; /* Space around the description */
+}
+
+/* Styling for preparation time section */
+.preparation-time {
+    background-color: #EBE0E4; /* Soft pink background */
+    padding: 1.25rem; /* Padding for inner spacing */
+    margin: 1rem; /* Outer margin */
+    border-radius: 1rem; /* Rounded corners */
+}
+
+.preparation-time {
+    color: #872657; /* Darker pink text */
+    margin-bottom: .75rem; /* Space below preparation time */
+}
+
+.preparation-time ul li::marker {
+    color: #872657; /* Pink markers */
+}
+
+/* Ingredient list styling */
+.Ingredients {
+    margin: 2rem; /* Space around the ingredients */
+}
+
+.Ingredients li {
+    margin-bottom: .5rem; /* Space between ingredients */
+}
+
+.Ingredients li span {
+    font-weight: initial; /* Regular font weight for ingredients */
+}
+
+/* Instruction styling */
+.Instruction .item {
+    padding-left: .5rem; /* Padding for instructions */
+    margin-bottom: .5rem; /* Space between instruction items */
+    display: flex; /* Flex layout for instruction items */
+}
+
+.Instruction .item .num {
+    color: var(--nutmeg); /* Nutmeg-colored numbers */
+    margin-right: 1rem; /* Space between number and text */
+    font-weight: 700; /* Bold number */
+}
+
+.Instruction .item p span {
+    font-weight: 700; /* Bold important text in instructions */
+}
+
+/* Styling for nutrition values */
+.Nutrition .values {
+    margin-bottom: 1rem; /* Space between nutrition values */
+}
+
+/* Styling the nutrition table */
+.nutrition-table .item {
+    padding: .75rem 2rem; /* Padding for table rows */
+    display: flex; /* Flex layout for table rows */
+    border-bottom: 1px solid var(--light-grey); /* Bottom border between rows */
+}
+
+.nutrition-table .item:last-child {
+    border-bottom: 0; /* Remove bottom border from last row */
+}
+
+.nutrition-table .item p:nth-child(2) {
+    color: var(--nutmeg); /* Nutmeg-colored text */
+    font-weight: 700; /* Bold text */
+}
+
+.nutrition-table .item > * {
+    width: 100px; /* Set width for columns */
+    margin-right: auto; /* Automatically adjust space */
+}
+
+/* Mobile responsiveness */
+@media(max-width: 540px) {
+    h1 {
+        margin-top: 2rem; /* Add margin at the top on smaller screens */
+    }
+
+    .container {
+        margin: 0; /* Remove outer margin */
+    }
+
+    .container .recipe-img {
+        padding: 0; /* Remove padding for images on mobile */
+        border-radius: 0; /* Remove rounded corners for images */
+    }
+
+    .container .recipe-img img {
+        border-radius: 0; /* Remove border-radius for images */
+    }
+}
+
+/* Adjust margin for recipe steps */
+.recipe-step {
+    margin: 2rem; /* Add more space for recipe steps */
+}
